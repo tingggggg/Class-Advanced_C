@@ -136,6 +136,7 @@ void add_inToList(tNumStorHead* list, int in, int loc, int beforeOrAfter) {
 
 void del_fromList(tNumStorHead* list, int loc) {
     if (list->counts == 1) {
+        free(list->head);
         list->head = NULL;
         list->tail = NULL;
     }
@@ -159,6 +160,7 @@ void del_fromList(tNumStorHead* list, int loc) {
         else {
             list->tail = tempPrev;
         }
+        free(ptr);
     }
     list->counts--;
 }
