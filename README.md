@@ -9,3 +9,8 @@
 - 交換一三列，交換一三行
 
 - 不能使用 "[]"，除了cmd line argument
+
+## HW3
+- 使用者輸入兩個list(維護list)
+
+- 兩個list合併並且排序(quick sort)
