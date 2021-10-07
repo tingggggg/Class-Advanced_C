@@ -37,3 +37,6 @@ void print_list(tNumStorHead* list);
 void get_input(tNumStorHead *list);
 void sort_list(tNumStorHead* list, int input);
 ```
+
+## HW5
+- 延續 HW4，新增尾刪(implement with prev node)
