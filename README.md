@@ -40,3 +40,6 @@ void sort_list(tNumStorHead* list, int input);
 
 ## HW5
 - 延續 HW4，新增尾刪(implement with prev node)
+
+## HW6
+- list 指定位置(前or後)新增 / 刪除某數
