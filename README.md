@@ -46,3 +46,7 @@ void sort_list(tNumStorHead* list, int input);
 
 ## HW7
 - 延續 HW6，分割頭文件
+
+## HW8
+- bitwise 操作
+- 判斷指定 high low 範圍中是否有值
