@@ -50,3 +50,8 @@ void sort_list(tNumStorHead* list, int input);
 ## HW8
 - bitwise 操作
 - 判斷指定 high low 範圍中是否有值
+
+## HW9
+- Function Pointer (升/降序實作)
+
+- Function Pointer(Extra) (16進位/2進位 轉換成 10進位)
