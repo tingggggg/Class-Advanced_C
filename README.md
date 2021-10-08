@@ -43,3 +43,6 @@ void sort_list(tNumStorHead* list, int input);
 
 ## HW6
 - list 指定位置(前or後)新增 / 刪除某數
+
+## HW7
+- 延續 HW6，分割頭文件
