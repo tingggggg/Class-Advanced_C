@@ -55,3 +55,8 @@ void sort_list(tNumStorHead* list, int input);
 - Function Pointer (升/降序實作)
 
 - Function Pointer(Extra) (16進位/2進位 轉換成 10進位)
+
+# HW10
+- Stack 管理
+
+- Pointer to pointer 改變pointer指向
