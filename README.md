@@ -59,4 +59,4 @@ void sort_list(tNumStorHead* list, int input);
 # HW10
 - Stack 管理
 
-- Pointer to pointer 改變pointer指向
+- Pointer to pointer 改變pointer指向(指向事先開放在棧區的記憶體地址/空間)
