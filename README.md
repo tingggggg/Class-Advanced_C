@@ -61,8 +61,38 @@ void sort_list(tNumStorHead* list, int input);
 
 - Pointer to pointer 改變pointer指向(指向事先開放在棧區的記憶體地址/空間)
 
-##
+## HW11
 - 大/小 不同 size 的記憶體 buffer 管理
 ```c=
-int a;
+#define TYPE_SMALL 0
+#define TYPE_LARGE 1
+
+#define NUM_SMALL_BYTE_BUF     8
+#define NUM_LARGE_BYTE_BUF     8
+
+#define SMALL_ELEMENT_SIZE  32
+#define LARGE_ELEMENT_SIZE  64
+
+#define LARGE_BUFFER_START (NUM_SMALL_BYTE_BUF * SMALL_ELEMENT_SIZE)
+
+unsigned char buffer[NUM_SMALL_BYTE_BUF*SMALL_ELEMENT_SIZE + NUM_LARGE_BYTE_BUF*LARGE_ELEMENT_SIZE];
+
+// size 28
+typedef struct type_small{
+    int id;
+    int score;
+    int location;
+    struct type_small* next;
+    struct type_small* prev;
+} tQueueSmall;
+
+// size 56
+typedef struct type_large{
+    int id;
+    int score[8];
+    int location;
+    struct type_large* next;
+    struct type_large* prev;
+} tQueueLarge;
+...
 ```
