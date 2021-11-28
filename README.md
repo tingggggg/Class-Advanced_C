@@ -62,7 +62,7 @@ void sort_list(tNumStorHead* list, int input);
 - Pointer to pointer 改變pointer指向(指向事先開放在棧區的記憶體地址/空間)
 
 ## HW11
-- 大/小 不同 size 的記憶體 buffer 管理
+- 大/小 struct 不同 size 的記憶體 buffer 管理
 ```c=
 #define TYPE_SMALL 0
 #define TYPE_LARGE 1
@@ -95,4 +95,33 @@ typedef struct type_large{
     struct type_large* prev;
 } tQueueLarge;
 ...
+```
+
+## HW12
+- 承上題，改成統一使用`tQueueNode`，並使用void pointer 管理大/小 struct 記憶體
+```c=
+typedef struct type_small{
+    int id;
+    int score;
+    int location;
+} tQueueSmall;
+
+typedef struct type_large{
+    int id;
+    int score[8];
+    int location;
+} tQueueLarge;
+
+typedef struct node {
+    int type;
+    void *content;
+    struct node *next;
+    struct node *prev;
+} tQueueNode;
+
+typedef struct {
+    tQueueNode* front;
+    tQueueNode* rear;
+    int count;
+} tQueue;
 ```
