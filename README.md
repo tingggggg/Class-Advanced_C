@@ -56,7 +56,13 @@ void sort_list(tNumStorHead* list, int input);
 
 - Function Pointer(Extra) (16進位/2進位 轉換成 10進位)
 
-# HW10
+## HW10
 - Stack 管理
 
 - Pointer to pointer 改變pointer指向(指向事先開放在棧區的記憶體地址/空間)
+
+##
+- 大/小 不同 size 的記憶體 buffer 管理
+```c=
+int a;
+```
