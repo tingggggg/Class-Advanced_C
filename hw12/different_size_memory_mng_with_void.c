@@ -429,35 +429,3 @@ void ourFree(int type, int mem_location) {
 void clear_single_bit(unsigned char* mask, int mem_location) {
     *mask &= ~(1 << mem_location);
 }
-
-
-// void dequeue_type_large(tQueue* queue, tQueueLarge* target) {
-//     if (queue->num_type_large == 1) {
-//         queue->type_large_front = NULL;
-//         queue->type_large_rear = NULL;
-//     }
-//     else if (target == queue->type_large_front) {
-//         queue->type_large_front = target->next;
-//     }
-//     else if (target == queue->type_large_rear) {
-//         queue->type_large_rear = target->prev;
-//     }
-//     else {
-//         target->prev->next = target->next;
-//         target->next->prev = target->prev;
-//     }
-
-//     --queue->num_type_large;
-//     ourFree(TYPE_LARGE, target, target->location);
-// }
-
-// tQueueLarge* find_target_large_node(tQueue* queue, int id) {
-//     tQueueLarge* p = queue->type_large_front;
-//     while (p) {
-//         if (p->id == id)
-//             return p;
-//         p = p->next;
-//     }
-
-//     return NULL;
-// }
