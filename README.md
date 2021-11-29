@@ -199,3 +199,41 @@ Int32 (*funcs[2])(Int32, Int32) = {ComeAscend, CompDescend};
 
 comp = funcs[1]; // CompDescend
 ```
+
+## HW15
+- union (聯合內的屬性共用同一塊記憶體，故同一時間內僅能用聯合內其中一種屬性)
+
+- enum (使用列舉可以使程式碼更直觀)
+
+- 透過union管理儲存 家電/手機 不同資料結構的電話簿 (電話簿插入根據姓名升序)
+
+```c=
+typedef enum operator {
+    CHT = 1,
+    FET,
+    TWN
+} Operator;
+
+typedef struct home {
+    char name[10];
+    char number[10];
+} HOME;
+
+typedef struct cellular {
+    char name[10];
+    char number[10];
+    Operator op;
+} CELL;
+
+typedef union user {
+    HOME home;
+    CELL cellular;
+} User;
+
+typedef struct user_t {
+    int type; // 1. home / 2. cellurlar
+    User user;
+    struct user_t* prev;
+    struct user_t* next;
+} user_type;
+```
