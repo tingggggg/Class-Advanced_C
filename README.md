@@ -180,7 +180,7 @@ Status
 ## HW14
 - typedef 宣告(不同於define單純代碼)
 
-- 例如 security key(128bit)，能夠使用`typedef unsigned char skey[16]; sizeof(skey) = 16 bytes`來代替
+- 例如 security key(128bit)，能夠使用`typedef unsigned char skey[16]; sizeof(skey) = 16 bytes`來代替
 
 ```c=
 #define TOTAL 5
