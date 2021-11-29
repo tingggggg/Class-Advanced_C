@@ -176,3 +176,26 @@ Status
 	byte_large_buff_mask: 1 1 1 1 1 1 1 1  | 1 1 1 1 1 1 1 1  |
 	type mixed queue: 1(0), 2(0), 3(0), 4(0), 5(0), 6(0), 7(0), 11(1), 33(1), 44(1), 55(1), 66(1), 77(1), 88(1), 111(1), 222(1), 444(1), 555(1), 666(1), 777(1), 888(1), 1111(1), 8(0), 2222(1), 333(1), 4444(1),
 ```
+
+## HW14
+- typedef 宣告(不同於define單純代碼)
+
+- 例如 security key(128bit)，能夠使用`typedef unsigned char skey[16]; sizeof(skey) = 16 bytes`來代替
+
+```c=
+#define TOTAL 5
+
+typedef int Int32;
+typedef Int32 Buf[TOTAL];
+typedef Int32 (*Comp)(Int32, Int32);
+
+...
+Buf* buf = (Buf*)malloc(sizeof(Buf));
+(*buf)[1] = 22;
+
+Comp comp;
+
+Int32 (*funcs[2])(Int32, Int32) = {ComeAscend, CompDescend};
+
+comp = funcs[1]; // CompDescend
+```
