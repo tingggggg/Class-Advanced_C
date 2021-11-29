@@ -125,3 +125,23 @@ typedef struct {
     int count;
 } tQueue;
 ```
+
+## HW13
+- 承上題，擴充buffer大小為可調整
+
+- large size 在小的 buffer 尋找空位置時，需處理跨不同 buffer 的狀況
+
+```shell=
+Which type you are going to operate?
+1. Add a type 1 item
+2. Add a type 2 item
+3. remove a type 1 item with a specific Id
+4. remove a type 2 item with a specific Id
+2
+	enter id: 4444
+
+Status
+	byte_small_buff_mask: 0 0 0 1 1 1 1 0  | 1 1 1 1 1 1 1 1  |
+	byte_large_buff_mask: 1 1 1 1 1 1 1 1  | 1 1 1 1 1 1 1 1  |
+	type mixed queue: 1(0), 2(0), 3(0), 4(0), 5(0), 6(0), 7(0), 11(1), 33(1), 44(1), 55(1), 66(1), 77(1), 88(1), 111(1), 222(1), 444(1), 555(1), 666(1), 777(1), 888(1), 1111(1), 8(0), 2222(1), 333(1), 4444(1),
+```
