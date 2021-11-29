@@ -237,3 +237,33 @@ typedef struct user_t {
     struct user_t* next;
 } user_type;
 ```
+
+## HW16
+- hashing 練習
+
+- 用桶儲存，link list 來解決 hash collision
+
+```c=
+#define N 5
+
+// init
+tNameID* name_list = (tNameID*)malloc(sizeof(tNameID) * N);
+
+tNameID *bucker_slot = (name_list + key);
+
+// empty bucket
+if (strlen(bucker_slot->name) == 0) {
+    *bucker_slot = *newPerson;
+
+    // use name_list space, so free newPerson space
+    free(newPerson);
+}
+
+// link list to resolve collision if not empty bucket
+else {
+    while (bucker_slot->next != NULL) {
+        bucker_slot = bucker_slot->next;
+    }
+    bucker_slot->next = newPerson;
+}
+```
