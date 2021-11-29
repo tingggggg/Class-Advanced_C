@@ -97,6 +97,22 @@ typedef struct type_large{
 ...
 ```
 
+```shell=
+Which type you are going to operate?
+1. Add a type 1 item
+2. Add a type 2 item
+3. remove a type 1 item with a specific Id
+4. remove a type 2 item with a specific Id
+2
+	enter id: 33
+
+Status
+	byte_small_buff_mask: 0 0 0 1 1 1 1 1
+	byte_large_buff_mask: 0 0 0 0 0 1 1 1
+	type small queue: 1 2 3 4 5
+	type large queue: 11 22 33
+```
+
 ## HW12
 - 承上題，改成統一使用`tQueueNode`，並使用void pointer 管理大/小 struct 記憶體
 ```c=
@@ -124,6 +140,21 @@ typedef struct {
     tQueueNode* rear;
     int count;
 } tQueue;
+```
+
+```shell=
+Which type you are going to operate?
+1. Add a type 1 item
+2. Add a type 2 item
+3. remove a type 1 item with a specific Id
+4. remove a type 2 item with a specific Id
+2
+	enter id: 33
+
+Status
+	byte_small_buff_mask: 0 0 0 1 1 1 1 1
+	byte_large_buff_mask: 0 0 0 0 0 1 1 1
+	type mixed queue: 1(0), 2(0), 3(0), 4(0), 5(0), 11(1), 22(1), 33(1),
 ```
 
 ## HW13
